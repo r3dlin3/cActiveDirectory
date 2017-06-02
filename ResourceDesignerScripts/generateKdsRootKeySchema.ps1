@@ -1,0 +1,2 @@
+﻿$Ensure = New-xDscResourceProperty -Name Ensure -Type String -Attribute Key -ValidateSet "Present", "Absent"
+New-xDscResource -Name KdsRootKey -ClassVersion 1.0 -FriendlyName KdsRootKey -Force -Property $Ensure -Path . -ModuleName "cActiveDirectory"
